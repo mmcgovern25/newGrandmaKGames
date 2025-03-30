@@ -1,0 +1,48 @@
+/* styles.css */
+.gradient-bg {
+  background: linear-gradient(to bottom, #22c55e, #15803d); /* Tailwind gradient colors */
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
+.gradient-bg:hover {
+  background: linear-gradient(to bottom, #a5d6a7, #81c784); /* Custom hover gradient */
+}
+
+.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%, 10%, 40% {
+    background: linear-gradient(to bottom, #a5d6a7, #81c784); /* Hover color */
+    border: 1px solid white; /* No border initially */
+    box-shadow: none; /* No shadow initially */
+  }
+  25%, 45%, 60% {
+    background: linear-gradient(to bottom, #22c55e, #15803d); /* Correct color */
+    border: 1px solid white; /* No border during this stage */
+    box-shadow: none; /* No shadow during this stage */
+  }
+  62%, 100% {
+    background: green; /* Final correct color */
+    border: 2px solid yellow; /* Add yellow border at the end */
+    box-shadow: 0 0 10px yellow; /* Add yellow glow effect at the end */
+  }
+}
+
+
+.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%, 10%, 40% {
+    background: linear-gradient(to bottom, #a5d6a7, #81c784); /* Hover color */
+  }
+  25%, 45%, 60% {
+    background: linear-gradient(to bottom, #22c55e, #15803d); /* Incorrect color */
+  }
+  62%, 100% {
+    background: crimson; /* Final incorrect color */
+  }
+}

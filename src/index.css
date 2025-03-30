@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* index.css */
+
+/* Default theme (light) */
+
+body {
+  transition: background-color 0.7s ease, color 0.7s ease; /* Add transition for smooth effect */
+}
+
+body.light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+
+main {
+  margin: 2rem auto;
+  text-align:center
+}
+
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer utilities {
+  .nav {
+    @apply relative ml-10 text-gray-500 font-mono font-bold tracking-[1px] hover:text-white
+  }
+
+  .nav::after {
+    @apply content-[''] bg-[#1bac08] h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300
+  }
+
+  .nav:hover::after {
+    @apply w-full
+  }
+
+}
+
+.green-gradient {
+  background: #00cea8;
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #006400 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #006400 97.5%);
+}
+
+
+.stroke {
+  stroke: #1bac08;
+  stroke-width: 12;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.text-indent {
+  text-indent: 1.5em; /* Adjust the value as needed */
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
